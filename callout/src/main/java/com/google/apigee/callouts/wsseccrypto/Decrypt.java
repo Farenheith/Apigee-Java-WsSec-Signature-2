@@ -276,6 +276,7 @@ public class Decrypt extends WssecCalloutBase implements Execution {
 
   public ExecutionResult execute(final MessageContext msgCtxt, final ExecutionContext execContext) {
     try {
+      initialize();
       msgCtxt.setVariable(varName("valid"), false);
       Document document = getDocument(msgCtxt);
 

@@ -498,6 +498,7 @@ public class Encrypt extends WssecCalloutBase implements Execution {
 
   public ExecutionResult execute(final MessageContext msgCtxt, final ExecutionContext execContext) {
     try {
+      initialize();
       Document document = getDocument(msgCtxt);
 
       CipherConfiguration cipherConfiguration =

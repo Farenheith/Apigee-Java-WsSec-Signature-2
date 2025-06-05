@@ -49,6 +49,7 @@ import org.w3c.dom.Node;
 
 public abstract class WssecCalloutBase {
   private static final String _varprefix = "wssec_";
+  private static boolean initialized = false;
   private Map properties; // read-only
   private static final String variableReferencePatternString = "(.*?)\\{([^\\{\\} ]+?)\\}(.*?)";
   private static final Pattern variableReferencePattern =
@@ -57,16 +58,18 @@ public abstract class WssecCalloutBase {
   private static final String commonError = "^(.+?)[:;] (.+)$";
   private static final Pattern commonErrorPattern = Pattern.compile(commonError);
 
-  static {
-    org.apache.xml.security.Init.init();
-  }
-
   public WssecCalloutBase(Map properties) {
     this.properties = properties;
   }
 
   static String varName(String s) {
     return _varprefix + s;
+  }
+
+  protected static void initialize() {
+    if (initialized) return;
+    org.apache.xml.security.Init.init();
+    initialized = true;
   }
 
   protected Document getDocument(MessageContext msgCtxt) throws Exception {
