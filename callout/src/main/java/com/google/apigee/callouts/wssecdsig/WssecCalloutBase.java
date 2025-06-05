@@ -45,38 +45,6 @@ import javax.xml.crypto.dsig.DigestMethod;
 import org.w3c.dom.Document;
 
 public abstract class WssecCalloutBase {
-  static {
-    try {
-      initSTRTransform();
-    } catch (Exception e) {
-      throw new ExceptionInInitializerError(e);
-    }
-  }
-
-  // private static ClassLoader getTCL() throws IllegalAccessException, InvocationTargetException {
-  //       return AccessController.doPrivileged(new PrivilegedAction<ClassLoader>() {
-  //           public ClassLoader run() {
-  //               return Thread.currentThread().getContextClassLoader();
-  //           }
-  //       });
-  //   }
-
-  private static void initSTRTransform() throws Exception {
-
-    // String className = "com.google.apigee.xml.STRTransformProvider";
-    // Class<? extends Provider> clazz = getTCL().loadClass(className).asSubclass(Provider.class);
-    // Provider provider = clazz.newInstance();
-
-    Provider provider = new com.google.apigee.xml.STRTransformProvider();
-    // int ret = Security.addProvider(provider);
-    int ret = Security.insertProviderAt(provider, 2);
-
-    // System.out.printf("Security Providers: \n");
-    // Provider[] provs = Security.getProviders();
-    // for (int i = 0; i < provs.length; i++) {
-    //   System.out.printf("%d: %s (%s)\n", i, provs[i].getName(), provs[i].getVersion());
-    // }
-  }
 
   private static final String _varprefix = "wssec_";
   protected Map properties; // read-only
