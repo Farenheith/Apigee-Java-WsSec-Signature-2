@@ -1,8 +1,11 @@
 
 **/Icon*
-**/Icon
-*/Icon
-Icon
+**/Icon
+
+*/Icon
+
+Icon
+
 
 **/#*.*#
 **/*.*~
@@ -12,4 +15,5 @@ Icon
 **/target/
 
 **/*.class
-
+.vscode
+bundle/apiproxy/resources/java

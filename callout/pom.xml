@@ -16,6 +16,7 @@
     <slf4j.version>1.7.14</slf4j.version>
     <testng.version>6.8.7</testng.version>
     <bouncycastle.version>[1.66,)</bouncycastle.version>
+    <xmlsec.version>3.0.3</xmlsec.version>
     <jackson.version>[2.9.10.1,)</jackson.version>
     <jmockit.version>1.55.0</jmockit.version>
     <apiproxy.java.rsrc.dir>../bundle/apiproxy/resources/java</apiproxy.java.rsrc.dir>
@@ -39,6 +40,11 @@
       <groupId>org.bouncycastle</groupId>
       <artifactId>bcpkix-jdk15on</artifactId>
       <version>${bouncycastle.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.santuario</groupId>
+      <artifactId>xmlsec</artifactId>
+      <version>${xmlsec.version}</version>
     </dependency>
     <dependency>
       <groupId>com.apigee.gateway.libraries</groupId>

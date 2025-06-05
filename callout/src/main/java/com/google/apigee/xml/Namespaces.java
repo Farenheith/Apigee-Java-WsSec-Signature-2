@@ -19,6 +19,7 @@ public class Namespaces {
       "http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd";
   public static final String XMLNS = "http://www.w3.org/2000/xmlns/";
   public static final String XMLDSIG = "http://www.w3.org/2000/09/xmldsig#";
+  public static final String XMLENC = "http://www.w3.org/2001/04/xmlenc#";
 
   public static final Map<String, String> defaultPrefixes;
   public static final Map<String, String> defaultNamespaces;
@@ -32,6 +33,7 @@ public class Namespaces {
     map1.put(WSSEC, "wssec");
     map1.put(WSSEC_11, "wssec1.1");
     map1.put(XMLDSIG, "ds");
+    map1.put(XMLENC, "xenc");
 
     defaultPrefixes = Collections.synchronizedMap(map1);
 
@@ -43,6 +45,7 @@ public class Namespaces {
     map2.put("wssec", WSSEC);
     map2.put("wssec1.1", WSSEC_11);
     map2.put("ds", XMLDSIG);
+    map2.put("xenc", XMLENC);
 
     defaultNamespaces = Collections.synchronizedMap(map2);
   }
