@@ -38,20 +38,20 @@ public enum ContentEncryptionCipher {
         case AES_128_CBC:
           return XMLCipher.AES_128;
 
-        case AES_128_GCM:
-          return XMLCipher.AES_128_GCM;
+        // case AES_128_GCM:
+        //   return XMLCipher.AES_128_GCM;
 
         case AES_192_CBC:
           return XMLCipher.AES_192;
 
-        case AES_192_GCM:
-          return XMLCipher.AES_192_GCM;
+        // case AES_192_GCM:
+        //   return XMLCipher.AES_192_GCM;
 
         case AES_256_CBC:
           return XMLCipher.AES_256;
 
-        case AES_256_GCM:
-          return XMLCipher.AES_256_GCM;
+        // case AES_256_GCM:
+        //   return XMLCipher.AES_256_GCM;
 
         case TRIPLEDES:
           return XMLCipher.TRIPLEDES;
